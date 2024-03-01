@@ -5,6 +5,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import ru.skypro.coursework2_1.exteptions.IncorrectQuestionAmountException;
 import ru.skypro.coursework2_1.service.QuestionService;
 import ru.skypro.coursework2_1.service.impl.ExaminerServiceImpl;
@@ -15,6 +16,7 @@ import static org.hamcrest.Matchers.hasSize;
 import static org.mockito.Mockito.when;
 import static ru.skypro.coursework2_1.serviceTest.QuestionConstants.MOCK_QUESTIONS;
 import static ru.skypro.coursework2_1.serviceTest.QuestionConstants.*;
+
 
 @ExtendWith(MockitoExtension.class)
 public class ExaminerServiceImplTest {

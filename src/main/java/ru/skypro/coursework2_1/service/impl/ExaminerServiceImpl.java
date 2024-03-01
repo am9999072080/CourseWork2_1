@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+
 @Service
 public class ExaminerServiceImpl implements ExaminerService {
-
     private final QuestionService questionService;
 
     public ExaminerServiceImpl(QuestionService questionService) {
@@ -23,11 +23,10 @@ public class ExaminerServiceImpl implements ExaminerService {
         if (amount <= 0 || amount > questionService.getAll().size()) {
             throw new IncorrectQuestionAmountException();
         }
-        Set<Question> questions = new HashSet<>();
-
-        while (questions.size() < amount) {
-            questions.add(questionService.getRandomQuestion());
+        Set<Question> questions2 = new HashSet<>();
+        while (questions2.size() < amount) {
+            questions2.add(questionService.getRandomQuestion());
         }
-        return questions;
+        return questions2;
     }
 }

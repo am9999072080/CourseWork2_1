@@ -1,13 +1,12 @@
 package ru.skypro.coursework2_1.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import org.springframework.web.bind.annotation.*;
 import ru.skypro.coursework2_1.model.Question;
 import ru.skypro.coursework2_1.service.QuestionService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
-
 
 @RestController
 @RequestMapping("/java")
@@ -15,22 +14,30 @@ public class JavaController {
     private final QuestionService questionService;
 
     public JavaController(QuestionService questionService) {
+
         this.questionService = questionService;
     }
 
-    @RequestMapping("/add")
+
+    @Operation(summary = "Добавления question & answer")
+    @PostMapping("add")
     public Question add(@RequestParam String question,
                         @RequestParam String answer) {
         return questionService.add(question, answer);
     }
 
-    @RequestMapping("/remove")
+
+    @ApiResponse(responseCode = "404", description = "!НЕ НАЙДЕН!")
+    @Operation(summary = "Удаления question & answer")
+    @DeleteMapping("/remove")
     public Question remove(@RequestParam String question,
                            @RequestParam String answer) {
         return questionService.remove(new Question(question, answer));
     }
 
-    @RequestMapping()
+
+    @Operation(summary = "Получения всех question & answer")
+    @GetMapping()
     public Collection<Question> getAll() {
         return questionService.getAll();
     }
