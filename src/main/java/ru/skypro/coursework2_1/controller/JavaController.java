@@ -18,7 +18,6 @@ public class JavaController {
         this.questionService = questionService;
     }
 
-
     @Operation(summary = "Добавления question & answer")
     @PostMapping("add")
     public Question add(@RequestParam String question,

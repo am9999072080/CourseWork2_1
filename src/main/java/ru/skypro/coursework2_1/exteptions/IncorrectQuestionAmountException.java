@@ -1,5 +1,4 @@
 package ru.skypro.coursework2_1.exteptions;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

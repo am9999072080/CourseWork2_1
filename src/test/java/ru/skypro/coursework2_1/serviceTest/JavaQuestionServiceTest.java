@@ -6,7 +6,6 @@ import ru.skypro.coursework2_1.exteptions.QuestionNotFoundException;
 import ru.skypro.coursework2_1.model.Question;
 import ru.skypro.coursework2_1.service.QuestionService;
 import ru.skypro.coursework2_1.service.impl.JavaQuestionService;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static ru.skypro.coursework2_1.serviceTest.QuestionConstants.*;

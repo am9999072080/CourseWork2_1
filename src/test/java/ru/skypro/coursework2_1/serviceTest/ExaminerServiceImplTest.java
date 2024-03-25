@@ -17,7 +17,6 @@ import static org.mockito.Mockito.when;
 import static ru.skypro.coursework2_1.serviceTest.QuestionConstants.MOCK_QUESTIONS;
 import static ru.skypro.coursework2_1.serviceTest.QuestionConstants.*;
 
-
 @ExtendWith(MockitoExtension.class)
 public class ExaminerServiceImplTest {
     @Mock
